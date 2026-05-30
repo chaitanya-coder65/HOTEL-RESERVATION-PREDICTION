@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+
+    background:rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border-radius:20px;
+    padding:40px;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+h2{
+    text-align:center;
+    color:#ffffff;
+    font-size:2.8rem;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:4px;
+    background:#f59e0b;
+    margin:15px auto;
+    border-radius:10px;
+}
+
+/* FORM */
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px 80px;
+}
+
+/* FORM GROUP */
+
+.form-group{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    align-items:center;
+    gap:15px;
+}
+
+/* LABELS */
+
+label{
+    color:#ffffff !important;
+    font-size:20px;
+    font-weight:700;
+    text-shadow:1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* INPUTS */
+
+input,
+select{
+    width:100%;
+    height:55px;
+
+    padding:0 15px;
+
+    background:#ffffff;
+
+    color:#000000;
+
+    font-size:18px;
+    font-weight:600;
+
+    border:none;
+    border-radius:10px;
+
+    transition:0.3s ease;
+}
+
+input:hover,
+select:hover{
+    transform:translateY(-2px);
+}
+
+input:focus,
+select:focus{
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(245,158,11,0.3),
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* DROPDOWN OPTIONS */
+
+select option{
+    background:#ffffff;
+    color:#000000;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* BUTTON */
+
+button{
+    grid-column:1/-1;
+
+    padding:16px;
+
+    border:none;
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f59e0b,
+        #f97316
+    );
+
+    color:#ffffff;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(249,115,22,0.45);
+}
+
+/* RESULT BOX */
+
+.result{
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.15);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    backdrop-filter:blur(10px);
+}
+
+.result p{
+    margin:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    form{
+        grid-template-columns:1fr;
+    }
+
+    .form-group{
+        grid-template-columns:1fr;
+    }
+
+    label{
+        font-size:18px;
+    }
+
+    input,
+    select{
+        font-size:16px;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#f59e0b;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
