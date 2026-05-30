@@ -33,9 +33,11 @@ pipeline {
 
                     sh '''
                     python -m venv ${VENV_DIR}
+
                     . ${VENV_DIR}/bin/activate
 
                     pip install --upgrade pip
+
                     pip install -e .
                     '''
                 }
@@ -60,7 +62,7 @@ pipeline {
                         export PATH=$PATH:${GCLOUD_PATH}
 
                         gcloud auth activate-service-account \
-                        --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
+                        --key-file="${GOOGLE_APPLICATION_CREDENTIALS}"
 
                         gcloud config set project ${GCP_PROJECT}
 
