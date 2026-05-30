@@ -31,7 +31,6 @@ pipeline{
             }
         }
 
-        stages{
         stage('Building and pushing Docker Images to GCR'){
             steps{
                withCredentials([file(credentialsId:'gcp-key', variable : "GOOGLE_APPLICATION_CREDENTIALS")])
