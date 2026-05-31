@@ -30,15 +30,16 @@ body{
     width:100%;
     max-width:1200px;
 
-    background:rgba(0,0,0,0.25);
+    background:rgba(255,255,255,0.08);
 
     backdrop-filter:blur(15px);
     -webkit-backdrop-filter:blur(15px);
 
-    border-radius:20px;
-    padding:40px;
-
     border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:20px;
+
+    padding:40px;
 
     box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
@@ -48,7 +49,7 @@ h2{
     color:#ffffff;
     font-size:2.8rem;
     font-weight:700;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 h2::after{
@@ -57,7 +58,7 @@ h2::after{
     width:120px;
     height:4px;
     background:#f59e0b;
-    margin:15px auto;
+    margin:15px auto 0;
     border-radius:10px;
 }
 
@@ -66,7 +67,7 @@ h2::after{
 form{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px 80px;
+    gap:25px 70px;
 }
 
 /* FORM GROUP */
@@ -78,16 +79,16 @@ form{
     gap:15px;
 }
 
-/* LABELS */
+/* LABEL */
 
 label{
-    color:#ffffff !important;
-    font-size:20px;
+    color:#ffffff;
+    font-size:18px;
     font-weight:700;
     text-shadow:1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* INPUTS */
+/* INPUT & SELECT */
 
 input,
 select{
@@ -100,27 +101,31 @@ select{
 
     color:#000000;
 
-    font-size:18px;
+    font-size:16px;
     font-weight:600;
 
     border:none;
     border-radius:10px;
 
-    transition:0.3s ease;
+    transition:all 0.3s ease;
 }
+
+/* HOVER EFFECT */
 
 input:hover,
 select:hover{
     transform:translateY(-2px);
 }
 
+/* FOCUS EFFECT */
+
 input:focus,
 select:focus{
     outline:none;
 
     box-shadow:
-        0 0 0 4px rgba(245,158,11,0.3),
-        0 10px 25px rgba(0,0,0,0.2);
+        0 0 0 4px rgba(245,158,11,0.35),
+        0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* DROPDOWN OPTIONS */
@@ -128,7 +133,7 @@ select:focus{
 select option{
     background:#ffffff;
     color:#000000;
-    font-size:18px;
+    font-size:16px;
     font-weight:600;
 }
 
@@ -137,7 +142,9 @@ select option{
 button{
     grid-column:1/-1;
 
-    padding:16px;
+    margin-top:10px;
+
+    height:58px;
 
     border:none;
     border-radius:12px;
@@ -156,7 +163,7 @@ button{
 
     cursor:pointer;
 
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 button:hover{
@@ -173,6 +180,8 @@ button:hover{
 
     background:rgba(255,255,255,0.15);
 
+    backdrop-filter:blur(10px);
+
     border-radius:15px;
 
     padding:20px;
@@ -184,8 +193,6 @@ button:hover{
     font-size:24px;
 
     font-weight:700;
-
-    backdrop-filter:blur(10px);
 }
 
 .result p{
@@ -205,16 +212,31 @@ button:hover{
     }
 
     label{
-        font-size:18px;
-    }
-
-    input,
-    select{
-        font-size:16px;
+        margin-bottom:5px;
     }
 
     h2{
         font-size:2rem;
+    }
+
+    input,
+    select{
+        font-size:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        padding:25px;
+    }
+
+    h2{
+        font-size:1.7rem;
     }
 }
 
@@ -224,11 +246,11 @@ button:hover{
     width:8px;
 }
 
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
 ::-webkit-scrollbar-thumb{
     background:#f59e0b;
     border-radius:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#e5e7eb;
 }
